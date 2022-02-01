@@ -28,7 +28,23 @@ let compareLength = function(wordA, wordB){
 const words = ['short', 'medium', 'delicious', 'nice', 'lengthy'];
 
 // The sort method sorts "in place", that is, it modifies the array
-let wordsSort = words.sort(compareLength);
+let wordClone = [...words]
+let wordsSort = wordClone.sort(compareLength);
 console.log(wordsSort)
 // Check that logging words now outputs
 // ["nice", "short", "medium", "lengthy", "delicious"]
+
+
+
+// Exercise 3
+//
+// Filter the words array from above to create a new array
+// named longWords that includes only the words with seven or more
+// characters
+
+const longerWords = words.filter(word => word.length > 6);
+console.log(longerWords)
+console.log(words)
+
+// Check that logging longerWords outputs
+// ["lengthy", "delicious"]
