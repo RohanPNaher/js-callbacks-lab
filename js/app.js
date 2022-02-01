@@ -123,10 +123,36 @@ Hints:
 - You must console.log the last line of the output, `FINISHED`, after `step3` has "finished".
 */
 
-step1(function() {
-  step2(function(){
-    step3(function(){
-      console.log('FINISHED')
-    })
-  })
-});
+// step1(function() {
+//   step2(function(){
+//     step3(function(){
+//       console.log('FINISHED')
+//     })
+//   })
+// });
+
+// Write function named `countdown` that accepts as an arg the starting number of seconds and console.logs the count down to zero one second apart from each other.
+
+// For example:
+
+// `countdown(3);`
+
+// console.logs something like the following:
+// Count: 3
+// Count: 2
+// Count: 1
+// Count: 0
+
+function countdown(time) {
+  let intervalTimer = setInterval(() => {
+    console.log(`Count: ${time}`)
+    time -= 1;
+
+    if (time < 0) {
+      clearInterval(intervalTimer)
+      return
+    }
+  }, 1000);
+};
+
+console.log(countdown(3))
