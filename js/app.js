@@ -4,8 +4,9 @@
 // wait three seconds, then write "Ding!" to the console.  Instead, it writes
 // "Ding!" immediately.  Find the bug and fix it.
 
-function writeDing() {
+let ringer = function writeDing() {
   console.log('Ding!');
 }
 
-let timerId = setTimeout(writeDing(), 3000);
+let timerId = setTimeout(ringer, 3000);
+
